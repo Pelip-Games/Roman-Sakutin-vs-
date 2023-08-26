@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 
 public class WeaponInput : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
 
-    public bool _canBeUsed;
+    private bool _canBeUsed;
 
-    public void Awake()
+    private void Awake()
     {
         _canBeUsed = true;
     }
