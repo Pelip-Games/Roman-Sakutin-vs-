@@ -5,7 +5,7 @@ public class Wallet : MonoBehaviour
 {
     private int _balance;
 
-    public event EventHandler<WalletChangedEventArgs> WalletChanged;
+    public event EventHandler<BalanceChangedEventArgs> BalanceChanged;
     public event EventHandler WalletIsEmpty;
 
     public int RequestMoney(int amount)
@@ -14,12 +14,12 @@ public class Wallet : MonoBehaviour
         {
             _balance = 0;
             WalletIsEmpty?.Invoke(this, EventArgs.Empty);
-            WalletChanged?.Invoke(this, new WalletChangedEventArgs(_balance));
+            BalanceChanged?.Invoke(this, new BalanceChangedEventArgs(_balance));
             return _balance;
         }
 
         _balance -= amount;
-        WalletChanged?.Invoke(this, new WalletChangedEventArgs(_balance));
+        BalanceChanged?.Invoke(this, new BalanceChangedEventArgs(_balance));
         return amount;
     }
 
@@ -36,7 +36,7 @@ public class Wallet : MonoBehaviour
         }
 
         _balance += amount;
-        WalletChanged?.Invoke(this, new WalletChangedEventArgs(_balance));
+        BalanceChanged?.Invoke(this, new BalanceChangedEventArgs(_balance));
     }
 
     private void OnTriggerEnter2D(Collider2D other)

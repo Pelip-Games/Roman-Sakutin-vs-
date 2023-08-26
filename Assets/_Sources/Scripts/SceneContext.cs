@@ -9,7 +9,7 @@ public class SceneContext : MonoBehaviour
 
     private void OnEnable()
     {
-        _wallet.WalletChanged += UpdateUIBalance;
+        _wallet.BalanceChanged += UpdateUIBalance;
         _wallet.WalletIsEmpty += DisableWeapon;
 
         _weaponInput.Fired += RequestMoney;
@@ -17,7 +17,7 @@ public class SceneContext : MonoBehaviour
 
     private void OnDisable()
     {
-        _wallet.WalletChanged -= UpdateUIBalance;
+        _wallet.BalanceChanged -= UpdateUIBalance;
         _wallet.WalletIsEmpty -= DisableWeapon;
 
         _weaponInput.Fired -= RequestMoney;
@@ -33,8 +33,8 @@ public class SceneContext : MonoBehaviour
         _weaponInput.Disable();
     }
 
-    private void UpdateUIBalance(object sender, WalletChangedEventArgs e)
+    private void UpdateUIBalance(object sender, BalanceChangedEventArgs e)
     {
-        _gameMenu.UpdateBalance(e.Balance);
+        _gameMenu.UpdateBalance(e.Amount);
     }
 }
