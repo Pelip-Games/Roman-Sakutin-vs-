@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Employer : MonoBehaviour
+public class Employee : MonoBehaviour
 {
     [SerializeField] private float _stalkeringStopDelay = 1f;
     [SerializeField] private NavMeshAgent _agent;

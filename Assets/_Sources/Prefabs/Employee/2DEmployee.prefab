@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 5866819966595593233}
   - component: {fileID: 5866819966595593454}
   - component: {fileID: 5866819966595593453}
-  - component: {fileID: 5866819966595593452}
+  - component: {fileID: 5138387286119607159}
   m_Layer: 0
-  m_Name: 2DEmployer
+  m_Name: 2DEmployee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,18 +150,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 360
---- !u!114 &5866819966595593452
+--- !u!114 &5138387286119607159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5866819966595593238}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8550f034611a06e4f88fc261204d8a7b, type: 3}
+  m_Script: {fileID: 11500000, guid: f7d4cc3bd041a394ba49861cbaee8b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bubblePrefab: {fileID: 4835377214603358271, guid: 81ed7d3bab3c9de40978b34f544aaaba,
+    type: 3}
 --- !u!1 &5866819967015780815
 GameObject:
   m_ObjectHideFlags: 0
