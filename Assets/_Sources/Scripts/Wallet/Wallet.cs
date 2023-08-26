@@ -43,6 +43,7 @@ public class Wallet : MonoBehaviour
         if (other.TryGetComponent(out Money money))
         {
             AddMoney(money.Amount);
+            Destroy(money.gameObject);
         }
     }
 }
