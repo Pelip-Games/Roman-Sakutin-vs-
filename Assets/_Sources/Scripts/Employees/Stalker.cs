@@ -4,6 +4,8 @@ using UnityEngine.AI;
 
 public class Stalker : MonoBehaviour
 {
+    [SerializeField, Min(0f)] private float _stopDistance;
+    
     private Transform _target;
     private Coroutine _following;
     private NavMeshAgent _agent;

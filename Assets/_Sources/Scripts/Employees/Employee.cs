@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Employer : MonoBehaviour
+public class Employee : MonoBehaviour
 {
     [SerializeField] private float _stalkeringStopDelay = 1f;
     [SerializeField] private NavMeshAgent _agent;
@@ -10,6 +10,8 @@ public class Employer : MonoBehaviour
     [SerializeField] private Patrolling _patrolling;
     [SerializeField] private PlayerSeeker _playerSeeker;
     [SerializeField] private Stalker _stalker;
+    [SerializeField] private GoAway _goAway;
+    [SerializeField] private Phrases _phrases;
 
     private bool _delayActive;
     private Coroutine _delay;
@@ -19,6 +21,7 @@ public class Employer : MonoBehaviour
         _patrolling.Init(_agent);
         _playerSeeker.Init(_player);
         _stalker.Init(_player, _agent);
+        _goAway.Init(_agent);
         
         _patrolling.Enable();
     }
@@ -38,10 +41,15 @@ public class Employer : MonoBehaviour
     private void OnPlayerBecameVisible()
     {
         if (_delayActive)
+        { 
             StopCoroutine(_delay);
-        
-        _patrolling.Disable();
-        _stalker.Enable();
+        }
+        else
+        {
+            _patrolling.Disable();
+            _stalker.Enable();
+            _phrases.SayStalkerPhrase();
+        }
     }
 
     private void OnPlayerBecameInvisible()
@@ -56,6 +64,25 @@ public class Employer : MonoBehaviour
 
         _stalker.Disable();
         _patrolling.Enable();
+        _phrases.SayMissPhrase();
         _delayActive = false;
+    }
+
+    [ContextMenu(nameof(MoneyTaken))]
+    private void MoneyTaken()
+    {
+        _phrases.SayMoneyPhrase();
+        Vector3 direction = transform.position - _player.position;
+        direction.z = 0;
+        direction.Normalize();
+        _goAway.Go(direction);
+        
+        _goAway.Gone += OnGone;
+    }
+
+    private void OnGone()
+    {
+        _goAway.Gone -= OnGone;
+        Destroy(gameObject);
     }
 }
