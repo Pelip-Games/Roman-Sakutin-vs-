@@ -10,6 +10,7 @@ public class Employee : MonoBehaviour
     [SerializeField] private Patrolling _patrolling;
     [SerializeField] private PlayerSeeker _playerSeeker;
     [SerializeField] private Stalker _stalker;
+    [SerializeField] private Phrases _phrases;
 
     private bool _delayActive;
     private Coroutine _delay;
@@ -38,10 +39,15 @@ public class Employee : MonoBehaviour
     private void OnPlayerBecameVisible()
     {
         if (_delayActive)
+        { 
             StopCoroutine(_delay);
-        
-        _patrolling.Disable();
-        _stalker.Enable();
+        }
+        else
+        {
+            _patrolling.Disable();
+            _stalker.Enable();
+            _phrases.SayStalkerPhrase();
+        }
     }
 
     private void OnPlayerBecameInvisible()
@@ -56,6 +62,7 @@ public class Employee : MonoBehaviour
 
         _stalker.Disable();
         _patrolling.Enable();
+        _phrases.SayMissPhrase();
         _delayActive = false;
     }
 }

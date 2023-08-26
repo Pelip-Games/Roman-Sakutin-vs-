@@ -45,12 +45,13 @@ public class PlayerSeeker : MonoBehaviour
 
     private bool IsPlayerVisible()
     {
-        Vector2 way = _player.position - transform.position;
-        return way.magnitude <= _visionDistance && InAngle(way.normalized) ;
+        Vector3 way = _player.position - transform.position;
+        bool hasWall = Physics2D.Raycast(transform.position, way.normalized, _visionDistance, _wallMask);
+        return way.magnitude <= _visionDistance && InAngle(way.normalized) && hasWall == false;
     }
 
-    private bool InAngle(Vector2 direction)
+    private bool InAngle(Vector3 direction)
     {
-        return _visionAngle * 0.5f <= Vector2.Angle(transform.up, direction);
+        return _visionAngle * 0.5f <= Vector3.Angle(transform.up, direction);
     }
 }
