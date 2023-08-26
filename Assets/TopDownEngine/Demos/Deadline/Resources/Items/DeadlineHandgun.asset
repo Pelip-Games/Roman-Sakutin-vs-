@@ -20,6 +20,7 @@ MonoBehaviour:
   Consumable: 1
   ConsumeQuantity: 1
   Equippable: 1
+  EquippableIfInventoryIsFull: 1
   MoveWhenEquipped: 1
   Droppable: 1
   CanMoveObject: 1
@@ -38,6 +39,8 @@ MonoBehaviour:
     with O-ring, and a match grade trigger with adjustable trigger stop.
   Icon: {fileID: 21300002, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   Prefab: {fileID: 1630057665610706, guid: 83a4c1367af8c664a9691801cd2a6ff8, type: 3}
+  ForcePrefabDropQuantity: 0
+  PrefabDropQuantity: 1
   DropProperties:
     Shape: 0
     NormalToSpawnPlane: {x: 0, y: 1, z: 0}
