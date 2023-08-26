@@ -571,6 +571,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5866819966595593232, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
+        type: 3}
+      propertyPath: _visionAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819966595593232, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
+        type: 3}
+      propertyPath: _visionDistance
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866819966595593233, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
+        type: 3}
+      propertyPath: _stopDistance
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5866819966595593234, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
         type: 3}
       propertyPath: _patrollingPoints.Array.data[0]

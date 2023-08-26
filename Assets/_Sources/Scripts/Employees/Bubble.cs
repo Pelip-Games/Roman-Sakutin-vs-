@@ -11,6 +11,9 @@ public class Bubble : MonoBehaviour
 
     private void Update()
     {
+        if (transform == null)
+            return;
+        
         transform.position = _owner.position + (Vector3)_offset;
     }
     

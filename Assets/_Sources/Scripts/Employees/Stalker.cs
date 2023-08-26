@@ -31,9 +31,7 @@ public class Stalker : MonoBehaviour
     {
         while (true)
         {
-            _agent.SetDestination(Vector3.Distance(transform.position, _target.position) > _stopDistance
-                ? _target.position
-                : transform.position);
+            _agent.SetDestination(_target.position);
 
             yield return null;
         }

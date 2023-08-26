@@ -10,6 +10,7 @@ public class Employee : MonoBehaviour
     [SerializeField] private Patrolling _patrolling;
     [SerializeField] private PlayerSeeker _playerSeeker;
     [SerializeField] private Stalker _stalker;
+    [SerializeField] private GoAway _goAway;
     [SerializeField] private Phrases _phrases;
 
     private bool _delayActive;
@@ -20,6 +21,7 @@ public class Employee : MonoBehaviour
         _patrolling.Init(_agent);
         _playerSeeker.Init(_player);
         _stalker.Init(_player, _agent);
+        _goAway.Init(_agent);
         
         _patrolling.Enable();
     }
@@ -64,5 +66,23 @@ public class Employee : MonoBehaviour
         _patrolling.Enable();
         _phrases.SayMissPhrase();
         _delayActive = false;
+    }
+
+    [ContextMenu(nameof(MoneyTaken))]
+    private void MoneyTaken()
+    {
+        _phrases.SayMoneyPhrase();
+        Vector3 direction = transform.position - _player.position;
+        direction.z = 0;
+        direction.Normalize();
+        _goAway.Go(direction);
+        
+        _goAway.Gone += OnGone;
+    }
+
+    private void OnGone()
+    {
+        _goAway.Gone -= OnGone;
+        Destroy(gameObject);
     }
 }

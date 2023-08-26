@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5866819966595593454}
   - component: {fileID: 5866819966595593453}
   - component: {fileID: 5138387286119607159}
+  - component: {fileID: 5622099176662552897}
   m_Layer: 0
   m_Name: 2DEmployee
   m_TagString: Untagged
@@ -80,6 +81,7 @@ MonoBehaviour:
   _patrolling: {fileID: 5866819966595593234}
   _playerSeeker: {fileID: 5866819966595593232}
   _stalker: {fileID: 5866819966595593233}
+  _goAway: {fileID: 5622099176662552897}
   _phrases: {fileID: 5138387286119607159}
 --- !u!114 &5866819966595593234
 MonoBehaviour:
@@ -166,6 +168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bubblePrefab: {fileID: 4835377214603358271, guid: 81ed7d3bab3c9de40978b34f544aaaba,
     type: 3}
+--- !u!114 &5622099176662552897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866819966595593238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee10b92a6344f7597cc808ee4842aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 6
 --- !u!1 &5866819967015780815
 GameObject:
   m_ObjectHideFlags: 0
