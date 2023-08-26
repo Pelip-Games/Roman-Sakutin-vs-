@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class WeaponInput : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
 
     private bool _canBeUsed;
+
+    public event EventHandler Fired;
 
     private void Awake()
     {
@@ -20,6 +23,7 @@ public class WeaponInput : MonoBehaviour
         }
 
         _weapon.Shoot();
+        Fired?.Invoke(this, EventArgs.Empty);
     }
 
     public void Enable()
