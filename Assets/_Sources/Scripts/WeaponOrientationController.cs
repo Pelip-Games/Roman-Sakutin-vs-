@@ -9,8 +9,8 @@ namespace _Sources.Scripts
 
         private void Update()
         {
-            var angle = Mathf.Atan2(_aim.position.y, _aim.position.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            Vector3 newDirection = (_aim.position - transform.position).normalized;
+            transform.right = newDirection;
         }
     }
 }
