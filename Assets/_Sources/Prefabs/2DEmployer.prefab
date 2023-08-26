@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stalkeringStopDelay: 1
-  _agent: {fileID: 0}
+  _agent: {fileID: 5866819966595593235}
   _player: {fileID: 0}
   _patrolling: {fileID: 5866819966595593234}
   _playerSeeker: {fileID: 5866819966595593232}
