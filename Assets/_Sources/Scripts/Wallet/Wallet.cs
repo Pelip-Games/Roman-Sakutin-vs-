@@ -10,10 +10,11 @@ public class Wallet : MonoBehaviour
 
     public int RequestMoney(int amount)
     {
-        if (amount <= _balance)
+        if (_balance <= amount)
         {
-            WalletIsEmpty?.Invoke(this, EventArgs.Empty);
             _balance = 0;
+            WalletIsEmpty?.Invoke(this, EventArgs.Empty);
+            WalletChanged?.Invoke(this, new WalletChangedEventArgs(_balance));
             return _balance;
         }
 
