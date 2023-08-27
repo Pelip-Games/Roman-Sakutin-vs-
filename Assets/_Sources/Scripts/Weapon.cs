@@ -6,14 +6,6 @@ internal class Weapon : MonoBehaviour
 
     internal void Shoot()
     {
-        Debug.Log(transform.position);
-        Debug.Log(transform.rotation);
-        var bullet = Instantiate(
-            _bulletPrefab,
-            transform.position,
-            transform.rotation
-        );
-
-        // bullet.transform.LookAt(_shootPoint);
+        Instantiate(_bulletPrefab, transform.position, transform.rotation);
     }
 }
