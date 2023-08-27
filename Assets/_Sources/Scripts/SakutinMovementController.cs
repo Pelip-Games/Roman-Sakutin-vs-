@@ -10,10 +10,10 @@ public class SakutinMovementController : MonoBehaviour
     [SerializeField] private Weapon _weapon;
     [SerializeField] private Phrases _phrases;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Rigidbody2D _rb;
 
     private bool _isStunned;
     private Vector2 _direction;
-    private Rigidbody2D _rb;
 
     public void ApplyStun()
     {
