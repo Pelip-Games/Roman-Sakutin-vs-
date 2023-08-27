@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1447185261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447185262}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1447185262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447185261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.472, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3165259062309982988}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3165259061566800935
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3165259062309982988
 Transform:
   m_ObjectHideFlags: 0
@@ -210,6 +241,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2864822138548181021}
+  - {fileID: 1447185262}
   m_Father: {fileID: 3165259061566800933}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -241,6 +273,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 5605971018952235027, guid: dfccab826b133f94b8d92345e1ad430e,
     type: 3}
   _weaponSprite: {fileID: 8817833649031434483}
+  _shootPoint: {fileID: 1447185262}
 --- !u!114 &3165259062309983089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,8 +356,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
+        type: 3}
       propertyPath: m_SortingOrder
-      value: 1000
+      value: 1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 47421343
       objectReference: {fileID: 0}
     - target: {fileID: 7916998438383713191, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
@@ -334,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 7916998438383713191, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f15d79824186d4c958c651a08311bf, type: 3}
