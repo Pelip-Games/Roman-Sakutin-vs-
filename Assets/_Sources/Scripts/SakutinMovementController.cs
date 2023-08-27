@@ -18,6 +18,7 @@ public class SakutinMovementController : MonoBehaviour
     {
         _isStunned = true;
         _animator.SetStun();
+        _rb.velocity = new Vector2(0, 0);
         StartCoroutine(StunRoutine(_stunSeconds));
     }
 
@@ -78,7 +79,6 @@ public class SakutinMovementController : MonoBehaviour
     {
         if (other.TryGetComponent(out WeaponProp weapon))
         {
-            Debug.Log("активировали пушку");
             _weapon.Activate(); // это бы вынести в WeaponInput
             _animator.SetWeapon();
             _phrases.SayGunPhrase();
