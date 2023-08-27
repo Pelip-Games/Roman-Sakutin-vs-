@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +19,8 @@ public class Employee : MonoBehaviour
 
     private bool _delayActive;
     private Coroutine _delay;
+
+    public event Action<Employee> MoneyTaken;
     
     private void Awake()
     {
@@ -60,6 +63,8 @@ public class Employee : MonoBehaviour
         _goAway.Gone += OnGone;
         
         OnDisable();
+        
+        MoneyTaken?.Invoke(this);
     }
 
     private void OnPlayerBecameVisible()
