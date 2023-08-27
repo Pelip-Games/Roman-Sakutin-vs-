@@ -53,6 +53,9 @@ public class Employee : MonoBehaviour
     [ContextMenu(nameof(TakeMoney))]
     public void TakeMoney()
     {
+        if (_delay != null)
+            StopCoroutine(_delay);
+        
         _phrases.SayMoneyPhrase();
         _animator.GetCash();
         _playerSeeker.Disable();

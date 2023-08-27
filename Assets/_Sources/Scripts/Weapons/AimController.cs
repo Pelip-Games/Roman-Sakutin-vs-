@@ -10,9 +10,9 @@ public class AimController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        var screenPoint = Input.mousePosition;
+        Vector3 screenPoint = Input.mousePosition;
         screenPoint.z = -_camera.transform.position.z;
 
         transform.position = _camera.ScreenToWorldPoint(screenPoint);
