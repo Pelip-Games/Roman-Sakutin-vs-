@@ -70,8 +70,8 @@ Material:
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
-    - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.73125
+    - _ScaleRatioB: 0.675
+    - _ScaleRatioC: 0.675
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -90,7 +90,7 @@ Material:
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
-    - _WeightBold: 0.75
+    - _WeightBold: 1
     - _WeightNormal: 0
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Zlusa _font SDF
+  m_Name: Zlusa Bubble
   m_EditorClassIdentifier: 
-  hashCode: 2117356460
+  hashCode: 1880508175
   material: {fileID: -1568396696175301748}
-  materialHashCode: -336876276
+  materialHashCode: -1711775153
   m_Version: 1.1.0
   m_SourceFontFileGUID: c8dea8108b58e6843b8b25ad6d9a278e
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: c8dea8108b58e6843b8b25ad6d9a278e,
@@ -132,7 +132,7 @@ MonoBehaviour:
     m_PointSize: 90
     m_Scale: 1
     m_UnitsPerEM: 2048
-    m_LineHeight: 90
+    m_LineHeight: 94.32
     m_AscentLine: 78.75
     m_CapLine: 57
     m_MeanLine: 29
@@ -2294,8 +2294,8 @@ MonoBehaviour:
   fontWeights: []
   normalStyle: 0
   normalSpacingOffset: 20
-  boldStyle: 0.75
-  boldSpacing: 15.4
+  boldStyle: 1
+  boldSpacing: 7
   italicStyle: 35
   tabSize: 10
 --- !u!28 &3527737973422185506

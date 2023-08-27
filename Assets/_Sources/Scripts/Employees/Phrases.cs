@@ -49,6 +49,8 @@ public class Phrases : MonoBehaviour
 
     [SerializeField] private Bubble _bubblePrefab;
 
+    private Bubble _currentBubble;
+    
     [ContextMenu(nameof(SayStalkerPhrase))]
     public void SayStalkerPhrase()
     {
@@ -96,7 +98,21 @@ public class Phrases : MonoBehaviour
 
     private void SayPhrase(string phrase)
     {
-        Bubble bubble = Instantiate(_bubblePrefab, transform);
-        bubble.Init(phrase);
+        if (_currentBubble != null)
+        {
+            _currentBubble.Destroyed -= OnBubbleDestroyed;
+            Destroy(_currentBubble.gameObject);
+            _currentBubble = null;
+        }
+        
+        _currentBubble = Instantiate(_bubblePrefab, transform);
+        _currentBubble.Init(phrase);
+        _currentBubble.Destroyed += OnBubbleDestroyed;
+    }
+
+    private void OnBubbleDestroyed()
+    {
+        _currentBubble.Destroyed -= OnBubbleDestroyed;
+        _currentBubble = null;
     }
 }

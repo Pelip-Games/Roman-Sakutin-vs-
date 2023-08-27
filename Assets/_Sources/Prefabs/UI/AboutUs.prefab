@@ -226,8 +226,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -527,8 +527,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u041C\u044B\u0448\u044C - \u043F\u0440\u0438\u0446\u0435\u043B\u0438\u0432\u0430\u043D\u0438\u0435\n\u041B\u041A\u041C
-    - \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0442\u044C \u0434\u0435\u043D\u044C\u0433\u0430\u043C\u0438\n\u041F\u041A\u041C
-    - \u044E\u0440\u043E\u0441\u0438\u0442\u044C \"\u0427\u043F\u043E\u043A\"\nWASD
+    - \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0438\u0442\u044C \u0434\u0435\u043D\u044C\u0433\u0430\u043C\u0438\nWASD
     - \u0431\u0435\u0433\u0430\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30d395b16838cce48bd1d57efae071b3, type: 2}
@@ -539,8 +538,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -563,7 +562,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -675,8 +674,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -699,7 +698,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -909,7 +908,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1021,8 +1020,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1045,7 +1044,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1145,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.18783018, g: 0.2673967, b: 0.5188679, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1274,7 +1273,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1386,8 +1385,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1410,7 +1409,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1745,7 +1744,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1850,15 +1849,15 @@ MonoBehaviour:
   m_text: "\u041F\u043E\u043C\u0433\u043E\u0442\u0438\u0442\u0435 \u0420\u043E\u043C\u0430\u043D\u0443
     \u043D\u0435 \u043E\u0431\u0430\u043D\u043A\u0440\u043E\u0442\u0438\u0442\u044C\u0441\u044F.
     \u041F\u0440\u044F\u0447\u044C\u0442\u0435\u0441\u044C \u043F\u043E\u043A\u0430
-    \u043D\u0435 \u043D\u0430\u0439\u0434\u0451\u0442\u0435 \u0434\u0435\u043D\u0435\u0433,
-    \u0447\u0442\u043E\u0431\u044B \u0432\u044B\u043F\u043B\u0430\u0442\u0438\u0442\u044C
-    \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C \u0437\u0430\u0440\u043F\u043B\u0430\u0442\u0443.
-    \u0421\u0442\u0440\u0435\u043B\u044F\u0439\u0442\u0435 \u043F\u0430\u0447\u043A\u0430\u043C\u0438
-    \u043A\u0443\u043F\u044E\u0440 \u043F\u043E\u043A\u0430 \u0442\u0435 \u043D\u0435
-    \u043E\u0442\u043E\u0431\u0440\u0430\u043B\u0438 \u0432\u043E\u043E\u0431\u0449\u0435
-    \u0432\u0441\u0451 \u0447\u0442\u043E \u0435\u0441\u0442\u044C. \u0421\u0434\u0435\u043B\u0430\u0439\u0442\u0435
-    \u0432\u0441\u0435\u0445 \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u043C\u0438
-    \u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043A\u0435\u0448"
+    \u043D\u0435 \u043D\u0430\u0439\u0434\u0451\u0442\u0435 \u0434\u0435\u043D\u044C\u0433\u0438
+    \u0438 \u0434\u0435\u043D\u044C\u0433\u043E\u043C\u0451\u0442, \u0447\u0442\u043E\u0431\u044B
+    \u0432\u044B\u043F\u043B\u0430\u0442\u0438\u0442\u044C \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430\u043C
+    \u0437\u0430\u0440\u043F\u043B\u0430\u0442\u0443. \u0421\u0442\u0440\u0435\u043B\u044F\u0439\u0442\u0435
+    \u043F\u0430\u0447\u043A\u0430\u043C\u0438 \u043A\u0443\u043F\u044E\u0440 \u043F\u043E\u043A\u0430
+    \u043E\u043D\u0438 \u043D\u0435 \u043E\u0442\u043E\u0431\u0440\u0430\u043B\u0438
+    \u0432\u043E\u043E\u0431\u0449\u0435 \u0432\u0441\u0451, \u0447\u0442\u043E \u0435\u0441\u0442\u044C.
+    \u0421\u0434\u0435\u043B\u0430\u0439\u0442\u0435 \u0432\u0441\u0435\u0445 \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u043C\u0438
+    \u0438 \u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30d395b16838cce48bd1d57efae071b3, type: 2}
   m_sharedMaterial: {fileID: -1568396696175301748, guid: 30d395b16838cce48bd1d57efae071b3,
@@ -1868,8 +1867,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289527295
+  m_fontColor: {r: 1, g: 0.99116004, b: 0.674, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1892,7 +1891,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535

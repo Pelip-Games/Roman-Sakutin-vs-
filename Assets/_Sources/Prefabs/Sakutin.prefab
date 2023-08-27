@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a448f31cb1d255f46b733c04a2f53633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 4
   _stunSeconds: 2
   _animator: {fileID: 3165259062037071669}
   _weapon: {fileID: 3165259062309983090}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cb0eab9a5048ab85afa24c9f872809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balance: 0
+  _balance: 100
 --- !u!114 &335196625
 MonoBehaviour:
   m_ObjectHideFlags: 0
