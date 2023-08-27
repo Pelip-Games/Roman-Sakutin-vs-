@@ -23,7 +23,7 @@ public class SakutinBankrupt : MonoBehaviour
         _wallet.WalletIsEmpty -= OnWalletIsEmpty;
         
         _movement.enabled = false;
-        _animator.SetStun();
+        _animator.SetLosing();
         _rigidbody.simulated = false;
     }
 }

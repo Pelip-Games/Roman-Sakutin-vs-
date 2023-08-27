@@ -21,6 +21,11 @@ public class MoneyHunter : MonoBehaviour
         Disable();
         
         Hunted?.Invoke();
+
+        if (collision.transform.TryGetComponent(out SakutinMovementController sakutin))
+        {
+            sakutin.ApplyStun();
+        }
     }
 
     public void Disable()
