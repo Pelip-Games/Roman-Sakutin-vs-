@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3165259061566800939}
   - component: {fileID: 3165259061566800932}
   - component: {fileID: 3165259062037071669}
+  - component: {fileID: 3165259062037071674}
   m_Layer: 10
   m_Name: Sakutin
   m_TagString: Untagged
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 10
   _animator: {fileID: 3165259062037071669}
-  _weapon: {fileID: 0}
+  _weapon: {fileID: 3165259062309983090}
 --- !u!114 &3165259062037071669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 8570279104708360992}
+--- !u!61 &3165259062037071674
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3165259061566800935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02, y: -0.02}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3165259062309982989
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3165259062309982989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.215, z: 0}
+  m_LocalPosition: {x: 0, y: -0.218, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -200,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 5605971018952235027, guid: dfccab826b133f94b8d92345e1ad430e,
     type: 3}
+  _weaponSprite: {fileID: 8817833649031434483}
 --- !u!114 &3165259062309983089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 918597337247771061, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.203
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 918597337247771061, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
@@ -277,6 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
         type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 1000
       objectReference: {fileID: 0}
@@ -285,11 +318,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigGunSprite
       objectReference: {fileID: 0}
+    - target: {fileID: 7916998438383713191, guid: 53f15d79824186d4c958c651a08311bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53f15d79824186d4c958c651a08311bf, type: 3}
 --- !u!4 &2864822138548181021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 918597337247771061, guid: 53f15d79824186d4c958c651a08311bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3134056633380057512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8817833649031434483 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5846053963120664923, guid: 53f15d79824186d4c958c651a08311bf,
     type: 3}
   m_PrefabInstance: {fileID: 3134056633380057512}
   m_PrefabAsset: {fileID: 0}
@@ -359,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172795652540153091, guid: 6902aad196794a14aa36a6c43a8e7fd3,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2172795652540153091, guid: 6902aad196794a14aa36a6c43a8e7fd3,
         type: 3}
