@@ -1,15 +1,19 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameEnd : MonoBehaviour
 {
+    [SerializeField, Min(0f)] private float _delay = 5f;
+    [SerializeField] private Canvas _canvas;
     [SerializeField] private WinPanel _winPanel;
-    [SerializeField] private WinPanel _gameOverPanel;
+    [SerializeField] private GameOverPanel _gameOverPanel;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private EmployeesCounter _employeesCounter;
 
     private void Start()
     {
+        _canvas.enabled = false;
         _wallet.WalletIsEmpty += WalletOnWalletIsEmpty;
         _employeesCounter.EmployeesEnd += EmployeesCounterOnEmployeesEnd;
     }
@@ -24,10 +28,15 @@ public class GameEnd : MonoBehaviour
         FinishGame(_gameOverPanel.gameObject);
     }
 
-    private void FinishGame(GameObject panel)
+    private async void FinishGame(GameObject panel)
     {
-        Instantiate(panel);
+        await Task.Delay(TimeSpan.FromSeconds(_delay));
+        
+        _canvas.enabled = true;
+        Instantiate(panel, _canvas.transform);
         Unsubscribe();
+
+        Cursor.visible = true;
     }
 
     private void Unsubscribe()
