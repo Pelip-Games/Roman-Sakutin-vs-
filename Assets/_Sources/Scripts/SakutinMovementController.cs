@@ -79,7 +79,6 @@ public class SakutinMovementController : MonoBehaviour
     {
         if (other.TryGetComponent(out WeaponProp weapon))
         {
-            Debug.Log("активировали пушку");
             _weapon.Activate(); // это бы вынести в WeaponInput
             _animator.SetWeapon();
             _phrases.SayGunPhrase();
