@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: OfficeDoor
+  m_Name: OfficeFloor2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: fe2546532d8e6e544a596e2be8d3ec81, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c068b74ccebf8a42b9f822726f7c1ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
