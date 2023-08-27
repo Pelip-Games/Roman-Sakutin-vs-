@@ -51,4 +51,9 @@ public class VisibilityRange : MonoBehaviour
     {
         _circleImage.transform.rotation = Quaternion.FromToRotation(Vector3.up, _direction) * Quaternion.AngleAxis(-_viewAngle / 2, Vector3.back);
     }
+
+    public void Disable()
+    {
+        _circleImage.enabled = false;
+    }
 }

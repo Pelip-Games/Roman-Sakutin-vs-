@@ -56,6 +56,12 @@ public class PlayerSeeker : MonoBehaviour
         _visibilityRange.Initialize(_visionDistance, _visionAngle, Forward);
     }
 
+    public void Disable()
+    {
+        enabled = false;
+        _visibilityRange.Disable();
+    }
+
     private bool IsPlayerVisible()
     {
         Vector3 way = _player.position - transform.position;
