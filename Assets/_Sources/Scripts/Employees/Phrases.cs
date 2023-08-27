@@ -33,7 +33,9 @@ public class Phrases : MonoBehaviour
         "Поработать, что ли? Да не...",
         "Опять мид ганкают"
     };
-    
+
+    private string _getGunPhrase = "Вот теперь можно раздать ЗП!";
+
     [SerializeField] private Bubble _bubblePrefab;
 
     [ContextMenu(nameof(SayStalkerPhrase))]
@@ -52,6 +54,14 @@ public class Phrases : MonoBehaviour
     public void SayMissPhrase()
     {
         SayRandom(_missing);
+    }
+
+    [ContextMenu(nameof(SayMissPhrase))]
+    public void SayGunPhrase()
+    {
+        Debug.Log(_getGunPhrase);
+        Bubble bubble = Instantiate(_bubblePrefab, transform);
+        bubble.Init(_getGunPhrase);
     }
 
     private void SayRandom(IReadOnlyList<string> phrases)
