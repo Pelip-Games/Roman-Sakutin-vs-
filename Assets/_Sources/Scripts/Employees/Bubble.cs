@@ -7,20 +7,10 @@ public class Bubble : MonoBehaviour
     [SerializeField] private Vector2 _offset;
     [SerializeField] private TMP_Text _text;
 
-    private Transform _owner;
-
-    private void Update()
-    {
-        if (transform == null)
-            return;
-        
-        transform.position = _owner.position + (Vector3)_offset;
-    }
-    
-    public void Init(string phrase, Transform owner)
+    public void Init(string phrase)
     {
         _text.text = phrase;
-        _owner = owner;
+        transform.localPosition = _offset;
         
         Destroy(gameObject, _lifeTime);
     }

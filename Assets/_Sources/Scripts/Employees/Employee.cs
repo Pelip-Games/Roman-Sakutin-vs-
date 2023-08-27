@@ -12,6 +12,8 @@ public class Employee : MonoBehaviour
     [SerializeField] private Stalker _stalker;
     [SerializeField] private GoAway _goAway;
     [SerializeField] private Phrases _phrases;
+    [SerializeField] private MoneyHunter _moneyHunter;
+    [SerializeField] private EmployeeAnimator _animator;
 
     private bool _delayActive;
     private Coroutine _delay;
@@ -24,18 +26,21 @@ public class Employee : MonoBehaviour
         _goAway.Init(_agent);
         
         _patrolling.Enable();
+        _animator.Walk();
     }
 
     private void OnEnable()
     {
         _playerSeeker.PlayerBecameVisible += OnPlayerBecameVisible;
         _playerSeeker.PlayerBecameInvisible += OnPlayerBecameInvisible;
+        _moneyHunter.Hunted += OnHunted;
     }
 
     private void OnDisable()
     {
         _playerSeeker.PlayerBecameVisible -= OnPlayerBecameVisible;
         _playerSeeker.PlayerBecameInvisible -= OnPlayerBecameInvisible;
+        _moneyHunter.Hunted -= OnHunted;
     }
 
     private void OnPlayerBecameVisible()
@@ -48,6 +53,7 @@ public class Employee : MonoBehaviour
         {
             _patrolling.Disable();
             _stalker.Enable();
+            _animator.Run();
             _phrases.SayStalkerPhrase();
         }
     }
@@ -65,13 +71,21 @@ public class Employee : MonoBehaviour
         _stalker.Disable();
         _patrolling.Enable();
         _phrases.SayMissPhrase();
+        _animator.Walk();
         _delayActive = false;
+    }
+
+    private void OnHunted()
+    {
+        MoneyTaken();
     }
 
     [ContextMenu(nameof(MoneyTaken))]
     private void MoneyTaken()
     {
         _phrases.SayMoneyPhrase();
+        _animator.GetCash();
+        
         Vector3 direction = transform.position - _player.position;
         direction.z = 0;
         direction.Normalize();

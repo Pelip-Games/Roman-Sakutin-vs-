@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 2867354294041606075, guid: 2268d3538d22d4a488841cf958d13b17,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2867354294041606075, guid: 2268d3538d22d4a488841cf958d13b17,
         type: 3}
@@ -69,6 +69,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2268d3538d22d4a488841cf958d13b17, type: 3}
+--- !u!95 &2759305848467023050 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2867354294041605701, guid: 2268d3538d22d4a488841cf958d13b17,
+    type: 3}
+  m_PrefabInstance: {fileID: 108620227054572175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1950401065152596983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,8 +140,13 @@ PrefabInstance:
     - target: {fileID: 5866819966595593238, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
         type: 3}
       propertyPath: m_Name
-      value: RedGuy
+      value: RedGuy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6669545801179079083, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
+        type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 2759305848467023050}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb9790bd77ca3445b37b681c7cd55c4, type: 3}
 --- !u!4 &5366626930188599266 stripped
