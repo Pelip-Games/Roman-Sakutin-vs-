@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 internal class Bullet : MonoBehaviour
 {
@@ -28,7 +29,14 @@ internal class Bullet : MonoBehaviour
 
         if (other.gameObject.TryGetComponent<Employee>(out Employee employee))
         {
-            employee.TakeMoney();
+            try
+            {
+                employee.TakeMoney();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
         }
 
         Destroy(gameObject);
