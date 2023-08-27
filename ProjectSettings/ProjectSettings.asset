@@ -12,9 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: "\u0420\u043E\u043C\u0430\u043D \u0421\u0430\u043A\u0443\u0442\u0438\u043D
-    \u043F\u0440\u043E\u0442\u0438\u0432!"
+  companyName: GangOfFour
+  productName: SakutinSnakeVSAll
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 0.23529412, b: 0, a: 1}
@@ -767,7 +766,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: TopDown
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -775,7 +774,8 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: TopDown
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: "\u0420\u043E\u043C\u0430\u043D \u0421\u0430\u043A\u0443\u0442\u0438\u043D
+    \u043F\u0440\u043E\u0442\u0438\u0432!"
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
