@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3165259062037071669}
   - component: {fileID: 1663900619438330471}
   - component: {fileID: 335196625}
+  - component: {fileID: 8634263468506511992}
   m_Layer: 10
   m_Name: Sakutin
   m_TagString: Untagged
@@ -227,6 +228,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bubblePrefab: {fileID: 4835377214603358271, guid: 81ed7d3bab3c9de40978b34f544aaaba,
     type: 3}
+--- !u!114 &8634263468506511992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3165259061566800935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d25ec22dc542388b3037f19e890254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallet: {fileID: 1663900619438330471}
+  _movement: {fileID: 3165259061566800932}
+  _animator: {fileID: 3165259062037071669}
+  _rigidbody: {fileID: 3165259061566800939}
 --- !u!1 &3165259062309982989
 GameObject:
   m_ObjectHideFlags: 0
