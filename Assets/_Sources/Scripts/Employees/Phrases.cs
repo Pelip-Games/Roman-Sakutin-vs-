@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,7 +35,14 @@ public class Phrases : MonoBehaviour
         "Опять мид ганкают"
     };
 
-    private string _getGunPhrase = "Вот теперь можно раздать ЗП!";
+    private readonly string _getGunPhrase = "Вот теперь можно раздать ЗП!";
+
+    private readonly string[] _startPhrases =
+    {
+        "Так, какой сегодня день?",
+        "Блин! Сегодня же день зарплаты!",
+        "Нельзя чтобы они меня поймали! Иначе они отберут у меня ВСЁ!"
+    };
 
     [SerializeField] private Bubble _bubblePrefab;
 
@@ -56,18 +64,35 @@ public class Phrases : MonoBehaviour
         SayRandom(_missing);
     }
 
-    [ContextMenu(nameof(SayMissPhrase))]
+    [ContextMenu(nameof(SayGunPhrase))]
     public void SayGunPhrase()
     {
-        Debug.Log(_getGunPhrase);
-        Bubble bubble = Instantiate(_bubblePrefab, transform);
-        bubble.Init(_getGunPhrase);
+        SayPhrase(_getGunPhrase);
+    }
+
+    [ContextMenu(nameof(SayStartPhrases))]
+    public void SayStartPhrases()
+    {
+        StartCoroutine(SayStartPhrasesRoutine());
+    }
+
+    private IEnumerator SayStartPhrasesRoutine()
+    {
+        foreach (var phrase in _startPhrases)
+        {
+            SayPhrase(phrase);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     private void SayRandom(IReadOnlyList<string> phrases)
     {
         string phrase = phrases[Random.Range(0, phrases.Count)];
+        SayPhrase(phrase);
+    }
 
+    private void SayPhrase(string phrase)
+    {
         Bubble bubble = Instantiate(_bubblePrefab, transform);
         bubble.Init(phrase);
     }
