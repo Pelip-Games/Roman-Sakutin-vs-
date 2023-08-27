@@ -18,6 +18,20 @@ public class Employee : MonoBehaviour
 
     private bool _delayActive;
     private Coroutine _delay;
+
+    [ContextMenu(nameof(TakeMoney))]
+    public void TakeMoney()
+    {
+        _phrases.SayMoneyPhrase();
+        _animator.GetCash();
+        
+        Vector3 direction = transform.position - _player.position;
+        direction.z = 0;
+        direction.Normalize();
+        _goAway.Go(direction);
+        
+        _goAway.Gone += OnGone;
+    }
     
     private void Awake()
     {
@@ -79,21 +93,7 @@ public class Employee : MonoBehaviour
 
     private void OnHunted()
     {
-        MoneyTaken();
-    }
-
-    [ContextMenu(nameof(MoneyTaken))]
-    private void MoneyTaken()
-    {
-        _phrases.SayMoneyPhrase();
-        _animator.GetCash();
-        
-        Vector3 direction = transform.position - _player.position;
-        direction.z = 0;
-        direction.Normalize();
-        _goAway.Go(direction);
-        
-        _goAway.Gone += OnGone;
+        TakeMoney();
     }
 
     private void OnGone()

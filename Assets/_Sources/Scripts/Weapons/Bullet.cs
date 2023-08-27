@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 internal class Bullet : MonoBehaviour
 {
@@ -17,5 +18,27 @@ internal class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.GetComponent(typeof(SakutinMovementController)) is not null)
+        {
+            return;
+        }
+
+        if (other.gameObject.TryGetComponent<Employee>(out Employee employee))
+        {
+            try
+            {
+                employee.TakeMoney();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
+        }
+
+        Destroy(gameObject);
     }
 }
