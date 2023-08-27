@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3586539328418383325}
   - component: {fileID: 5683333096175203119}
   - component: {fileID: 6016285678714367461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boiler
   m_TagString: Untagged
   m_Icon: {fileID: 0}

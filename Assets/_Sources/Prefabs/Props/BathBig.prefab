@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7287080262840110375}
   - component: {fileID: 240404313867491161}
   - component: {fileID: 7561346606126421707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BathBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}

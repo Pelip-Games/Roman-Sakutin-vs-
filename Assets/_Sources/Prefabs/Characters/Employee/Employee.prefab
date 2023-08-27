@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c2561a774485b39d2e4c7b4cf33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionAngle: 60
+  _visionAngle: 120
   _visionDistance: 5
   _wallMask:
     serializedVersion: 2
@@ -383,12 +383,12 @@ PrefabInstance:
     - target: {fileID: 3316422903551117575, guid: 9036148a61f7d4044af3fa6553af1956,
         type: 3}
       propertyPath: _viewAngle
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3316422903822534260, guid: 9036148a61f7d4044af3fa6553af1956,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659259
+      value: 0.8660254
       objectReference: {fileID: 0}
     - target: {fileID: 3316422903822534260, guid: 9036148a61f7d4044af3fa6553af1956,
         type: 3}
@@ -403,12 +403,12 @@ PrefabInstance:
     - target: {fileID: 3316422903822534260, guid: 9036148a61f7d4044af3fa6553af1956,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.25881907
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3316422903822534261, guid: 9036148a61f7d4044af3fa6553af1956,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0.16666667
+      value: 0.33333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9036148a61f7d4044af3fa6553af1956, type: 3}
