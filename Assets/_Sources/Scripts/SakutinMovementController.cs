@@ -5,6 +5,7 @@ public class SakutinMovementController : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private SakutinAnimatorController _animator;
+    [SerializeField] private Weapon _weapon;
 
     private Vector2 _direction;
     private Rigidbody2D _rb;
@@ -52,8 +53,9 @@ public class SakutinMovementController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Weapon weapon))
+        if (other.TryGetComponent(out WeaponProp weapon))
         {
+            _weapon.Activate(); // это бы вынести в WeaponInput
             _animator.SetWeapon();
             Destroy(weapon.gameObject);
         }
