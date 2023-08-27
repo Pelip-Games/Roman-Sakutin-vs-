@@ -703,10 +703,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sakutin
       objectReference: {fileID: 0}
+    - target: {fileID: 3165259062309982989, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3165259062309983091, guid: 8141a8cca9a5ba240b33d45c166e4508,
         type: 3}
       propertyPath: _aim
       value: 
       objectReference: {fileID: 174691130}
+    - target: {fileID: 5089265237714913807, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817833649031434483, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817833649031434483, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817833649031434483, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 47421343
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8141a8cca9a5ba240b33d45c166e4508, type: 3}
