@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,19 +20,7 @@ public class Employee : MonoBehaviour
     private bool _delayActive;
     private Coroutine _delay;
 
-    [ContextMenu(nameof(TakeMoney))]
-    public void TakeMoney()
-    {
-        _phrases.SayMoneyPhrase();
-        _animator.GetCash();
-        
-        Vector3 direction = transform.position - _player.position;
-        direction.z = 0;
-        direction.Normalize();
-        _goAway.Go(direction);
-        
-        _goAway.Gone += OnGone;
-    }
+    public event Action<Employee> MoneyTaken;
     
     private void Awake()
     {
@@ -57,6 +46,26 @@ public class Employee : MonoBehaviour
         _playerSeeker.PlayerBecameVisible -= OnPlayerBecameVisible;
         _playerSeeker.PlayerBecameInvisible -= OnPlayerBecameInvisible;
         _moneyHunter.Hunted -= OnHunted;
+    }
+
+    [ContextMenu(nameof(TakeMoney))]
+    public void TakeMoney()
+    {
+        _phrases.SayMoneyPhrase();
+        _animator.GetCash();
+        _playerSeeker.Disable();
+        _moneyHunter.Disable();
+        
+        Vector3 direction = transform.position - _player.position;
+        direction.z = 0;
+        direction.Normalize();
+        _goAway.Go(direction);
+        
+        _goAway.Gone += OnGone;
+        
+        OnDisable();
+        
+        MoneyTaken?.Invoke(this);
     }
 
     private void OnPlayerBecameVisible()

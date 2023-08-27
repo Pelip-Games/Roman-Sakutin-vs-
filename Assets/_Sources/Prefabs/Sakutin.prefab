@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3165259061566800932}
   - component: {fileID: 3165259062037071669}
   - component: {fileID: 1663900619438330471}
+  - component: {fileID: 474553964727244713}
   m_Layer: 10
   m_Name: Sakutin
   m_TagString: Untagged
@@ -142,7 +143,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &3165259062037071674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,6 +210,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cb0eab9a5048ab85afa24c9f872809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _balance: 500
+--- !u!114 &474553964727244713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3165259061566800935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d25ec22dc542388b3037f19e890254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallet: {fileID: 1663900619438330471}
+  _movement: {fileID: 3165259061566800932}
+  _animator: {fileID: 3165259062037071669}
+  _rigidbody: {fileID: 3165259061566800939}
 --- !u!1 &3165259062309982989
 GameObject:
   m_ObjectHideFlags: 0

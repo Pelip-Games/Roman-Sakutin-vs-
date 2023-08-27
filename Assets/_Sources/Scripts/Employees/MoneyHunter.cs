@@ -17,12 +17,19 @@ public class MoneyHunter : MonoBehaviour
             return;
 
         wallet.RequestMoney(_neededMoney);
-        _isHunted = true;
+        
+        Disable();
+        
         Hunted?.Invoke();
 
         if (collision.transform.TryGetComponent(out SakutinMovementController sakutin))
         {
             sakutin.ApplyStun();
         }
+    }
+
+    public void Disable()
+    {
+        _isHunted = true;
     }
 }
