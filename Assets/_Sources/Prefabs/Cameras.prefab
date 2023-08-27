@@ -167,28 +167,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -29.806831, y: 14.44726}
-      - {x: -29.88527, y: -7.5178013}
-      - {x: -62.009148, y: -7.639844}
-      - {x: -62.001064, y: -27.21545}
-      - {x: 2.0901136, y: -27.453556}
-      - {x: 2.0409164, y: -11.524703}
-      - {x: 6.1138372, y: -11.466148}
-      - {x: 6.0867167, y: -7.5401926}
-      - {x: 7.045079, y: -7.5251637}
-      - {x: 7.0684633, y: -6.4596224}
-      - {x: 8.028079, y: -6.4830647}
-      - {x: 8.02815, y: 0.52235866}
-      - {x: 7.0625353, y: 0.5019531}
-      - {x: 7.0293264, y: 1.5050669}
-      - {x: 6.040578, y: 1.4535961}
-      - {x: 6.035758, y: 3.4251087}
-      - {x: 7.025651, y: 3.425695}
-      - {x: 6.9691343, y: 11.507219}
-      - {x: 5.0680075, y: 11.500648}
-      - {x: 4.988967, y: 12.416574}
-      - {x: 1.9682684, y: 12.364779}
-      - {x: 1.8849688, y: 14.464356}
+    - - {x: -15.000908, y: 5.0028133}
+      - {x: -15.171603, y: -16.749567}
+      - {x: -46.99673, y: -16.99573}
+      - {x: -47.004265, y: -36.987854}
+      - {x: 17.020187, y: -37.029175}
+      - {x: 17.017366, y: -22.99559}
+      - {x: 21.014278, y: -20.997646}
+      - {x: 23.003445, y: -18.67022}
+      - {x: 23.02886, y: -16.009789}
+      - {x: 23.273275, y: -6.296369}
+      - {x: 21.979794, y: 2.0101738}
+      - {x: 20.78367, y: 3.249199}
+      - {x: 18.631557, y: 4.379308}
+      - {x: 17.011496, y: 5.006234}
 --- !u!1 &5277944265515705058
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4354959184311289102}
   - component: {fileID: 5300685729531699959}
-  - component: {fileID: 3209506649428600738}
+  - component: {fileID: 924800776}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -234,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3209506649428600738
+--- !u!114 &924800776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,19 +235,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 5277944265515705058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
-  m_AngularDampingMode: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AngularDamping: 0
+  m_TargetMovementOnly: 1
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_CameraDistance: 10
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_DeadZoneDepth: 0
+  m_UnlimitedSoftZone: 0
+  m_SoftZoneWidth: 0.226
+  m_SoftZoneHeight: 0.291
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
+  m_GroupFramingMode: 2
+  m_AdjustmentMode: 0
+  m_GroupFramingSize: 0.8
+  m_MaxDollyIn: 5000
+  m_MaxDollyOut: 5000
+  m_MinimumDistance: 1
+  m_MaximumDistance: 5000
+  m_MinimumFOV: 3
+  m_MaximumFOV: 60
+  m_MinimumOrthoSize: 1
+  m_MaximumOrthoSize: 5000
 --- !u!1 &5848619148822034684
 GameObject:
   m_ObjectHideFlags: 0
