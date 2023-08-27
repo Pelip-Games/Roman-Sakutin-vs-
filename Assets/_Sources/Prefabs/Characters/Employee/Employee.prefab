@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7701c2561a774485b39d2e4c7b4cf33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visionAngle: 90
-  _visionDistance: 1.5
+  _visionAngle: 45
+  _visionDistance: 3
   _wallMask:
     serializedVersion: 2
     m_Bits: 256
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 3
+  _speed: 3.5
 --- !u!114 &6669545801179079083
 MonoBehaviour:
   m_ObjectHideFlags: 0

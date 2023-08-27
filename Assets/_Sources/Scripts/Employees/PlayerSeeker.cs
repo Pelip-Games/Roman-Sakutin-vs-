@@ -60,6 +60,6 @@ public class PlayerSeeker : MonoBehaviour
 
     private bool InAngle(Vector3 direction)
     {
-        return _visionAngle * 0.5f <= Vector3.Angle(Forward, direction);
+        return Vector3.Angle(Forward, direction) <= _visionAngle * 0.5f;
     }
 }
