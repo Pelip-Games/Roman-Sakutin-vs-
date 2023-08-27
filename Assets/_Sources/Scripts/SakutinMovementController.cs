@@ -8,6 +8,7 @@ public class SakutinMovementController : MonoBehaviour
     [SerializeField] private int _stunSeconds;
     [SerializeField] private SakutinAnimatorController _animator;
     [SerializeField] private Weapon _weapon;
+    [SerializeField] private Phrases _phrases;
 
     private bool _isStunned;
     private Vector2 _direction;
@@ -77,8 +78,10 @@ public class SakutinMovementController : MonoBehaviour
     {
         if (other.TryGetComponent(out WeaponProp weapon))
         {
+            Debug.Log("активировали пушку");
             _weapon.Activate(); // это бы вынести в WeaponInput
             _animator.SetWeapon();
+            _phrases.SayGunPhrase();
             Destroy(weapon.gameObject);
         }
     }
