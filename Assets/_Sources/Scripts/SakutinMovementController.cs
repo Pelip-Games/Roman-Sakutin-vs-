@@ -1,14 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class SakutinMovementController : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private int _stunSeconds;
     [SerializeField] private SakutinAnimatorController _animator;
     [SerializeField] private Weapon _weapon;
 
+    private bool _isStunned;
     private Vector2 _direction;
     private Rigidbody2D _rb;
+
+    public void ApplyStun()
+    {
+        _isStunned = true;
+        _animator.SetStun();
+        StartCoroutine(StunRoutine(_stunSeconds));
+    }
+
+    private IEnumerator StunRoutine(int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        _isStunned = false;
+        _animator.SetIdle();
+    }
 
     #region Implement MonoBehaviour
     private void Awake()
@@ -33,6 +50,11 @@ public class SakutinMovementController : MonoBehaviour
 
     private void Move()
     {
+        if (_isStunned)
+        {
+            return;
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
