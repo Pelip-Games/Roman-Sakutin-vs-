@@ -18,4 +18,19 @@ internal class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.GetComponent(typeof(SakutinMovementController)) is not null)
+        {
+            return;
+        }
+
+        if (other.gameObject.TryGetComponent<Employee>(out Employee employee))
+        {
+            employee.TakeMoney();
+        }
+
+        Destroy(gameObject);
+    }
 }
