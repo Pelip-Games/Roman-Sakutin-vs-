@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4086819983897934382}
   - component: {fileID: 2107433683304375394}
   - component: {fileID: 8345610915093946871}
+  - component: {fileID: -1663942710907358696}
   m_Layer: 0
   m_Name: PlantBig1
   m_TagString: Untagged
@@ -111,3 +112,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 2}
   m_EdgeRadius: 0
+--- !u!208 &-1663942710907358696
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189423366126576562}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
