@@ -21,7 +21,7 @@ public class Employee : MonoBehaviour
     private void Awake()
     {
         _patrolling.Init(_agent);
-        _playerSeeker.Init(_player);
+        _playerSeeker.Init(_player, _agent);
         _stalker.Init(_player, _agent);
         _goAway.Init(_agent);
         
