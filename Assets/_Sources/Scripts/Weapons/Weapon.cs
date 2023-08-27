@@ -4,23 +4,24 @@ internal class Weapon : MonoBehaviour
 {
     [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private SpriteRenderer _weaponSprite;
+    [SerializeField] private Transform _shootPoint;    
 
     public bool IsActive { get; private set; }
 
     public void Activate()
     {
         IsActive = true;
-        _weaponSprite.gameObject.SetActive(IsActive);
+        gameObject.SetActive(IsActive);
     }
 
     public void Deactivate()
     {
         IsActive = false;
-        _weaponSprite.gameObject.SetActive(IsActive);
+        gameObject.SetActive(IsActive);
     }
 
     internal void Shoot()
     {
-        Instantiate(_bulletPrefab, transform.position, transform.rotation);
+        Instantiate(_bulletPrefab, _shootPoint.position, transform.rotation);
     }
 }

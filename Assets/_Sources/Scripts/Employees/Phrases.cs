@@ -58,7 +58,7 @@ public class Phrases : MonoBehaviour
     {
         string phrase = phrases[Random.Range(0, phrases.Count)];
 
-        Bubble bubble = Instantiate(_bubblePrefab);
-        bubble.Init(phrase, transform);
+        Bubble bubble = Instantiate(_bubblePrefab, transform);
+        bubble.Init(phrase);
     }
 }
