@@ -3940,6 +3940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sakutin
       objectReference: {fileID: 0}
+    - target: {fileID: 3165259061566800939, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3165259062309982989, guid: 8141a8cca9a5ba240b33d45c166e4508,
         type: 3}
       propertyPath: m_IsActive
