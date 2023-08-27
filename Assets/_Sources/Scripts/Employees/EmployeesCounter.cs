@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class EnemyCounter : MonoBehaviour
+public class EmployeesCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text _counter;
     

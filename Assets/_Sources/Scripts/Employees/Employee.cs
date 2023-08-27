@@ -54,6 +54,7 @@ public class Employee : MonoBehaviour
         _phrases.SayMoneyPhrase();
         _animator.GetCash();
         _playerSeeker.Disable();
+        _moneyHunter.Disable();
         
         Vector3 direction = transform.position - _player.position;
         direction.z = 0;

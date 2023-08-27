@@ -17,7 +17,14 @@ public class MoneyHunter : MonoBehaviour
             return;
 
         wallet.RequestMoney(_neededMoney);
-        _isHunted = true;
+        
+        Disable();
+        
         Hunted?.Invoke();
+    }
+
+    public void Disable()
+    {
+        _isHunted = true;
     }
 }
