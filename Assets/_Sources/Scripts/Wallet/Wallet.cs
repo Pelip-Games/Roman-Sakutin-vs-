@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    private int _balance;
+    [SerializeField] private int _balance;
+
+    public int Balance => _balance;
 
     public event EventHandler<BalanceChangedEventArgs> BalanceChanged;
     public event EventHandler WalletIsEmpty;
