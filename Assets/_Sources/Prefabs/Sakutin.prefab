@@ -190,6 +190,7 @@ MonoBehaviour:
   _weapon: {fileID: 3165259062309983090}
   _phrases: {fileID: 335196625}
   _spriteRenderer: {fileID: 8570279104708360995}
+  _rb: {fileID: 3165259061566800939}
 --- !u!114 &3165259062037071669
 MonoBehaviour:
   m_ObjectHideFlags: 0
