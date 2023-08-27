@@ -17,7 +17,8 @@ public class WeaponInput : MonoBehaviour
     private void Update()
     {
         if (_canBeUsed == false
-            || Input.GetMouseButtonDown(0) == false)
+            || Input.GetMouseButtonDown(0) == false
+            || _weapon.IsActive == false)
         {
             return;
         }

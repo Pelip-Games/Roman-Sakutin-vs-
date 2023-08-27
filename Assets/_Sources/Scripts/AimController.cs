@@ -7,6 +7,7 @@ public class AimController : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
+        Cursor.visible = false;
     }
 
     private void Update()
