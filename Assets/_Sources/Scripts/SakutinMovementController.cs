@@ -18,6 +18,7 @@ public class SakutinMovementController : MonoBehaviour
     {
         _isStunned = true;
         _animator.SetStun();
+        _rb.velocity = new Vector2(0, 0);
         StartCoroutine(StunRoutine(_stunSeconds));
     }
 
