@@ -38,13 +38,13 @@ public class SakutinAnimatorController : MonoBehaviour
         _animator.SetTrigger("isRunning");
     }
 
-    public void SetHurt()
+    public void SetLosing()
     {
-        _animator.SetTrigger("isHurt");
+        _animator.SetTrigger("isStunned");
     }
 
     public void SetStun()
     {
-        _animator.SetTrigger("isStunned");
+        _animator.SetTrigger("isHurt");
     }
 }
