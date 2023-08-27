@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 6953993319531642597}
+    - target: {fileID: 8322135686450998607, guid: 9cb9790bd77ca3445b37b681c7cd55c4,
+        type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 6953993319531642599}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cb9790bd77ca3445b37b681c7cd55c4, type: 3}
 --- !u!4 &6259443033364069618 stripped
@@ -152,6 +157,12 @@ PrefabInstance:
 --- !u!95 &6953993319531642597 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1782074678688909508, guid: 81b01280e91f7b84ca43c5a00ddd1fb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8663447316518663713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6953993319531642599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1782074678688909510, guid: 81b01280e91f7b84ca43c5a00ddd1fb9,
     type: 3}
   m_PrefabInstance: {fileID: 8663447316518663713}
   m_PrefabAsset: {fileID: 0}

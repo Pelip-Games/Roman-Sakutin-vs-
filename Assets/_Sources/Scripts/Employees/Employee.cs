@@ -13,6 +13,7 @@ public class Employee : MonoBehaviour
     [SerializeField] private GoAway _goAway;
     [SerializeField] private Phrases _phrases;
     [SerializeField] private MoneyHunter _moneyHunter;
+    [SerializeField] private EmployeeSpriteSwap _spriteSwap;
     [SerializeField] private EmployeeAnimator _animator;
 
     private bool _delayActive;
@@ -24,6 +25,7 @@ public class Employee : MonoBehaviour
         _playerSeeker.Init(_player, _agent);
         _stalker.Init(_player, _agent);
         _goAway.Init(_agent);
+        _spriteSwap.Init(_agent);
         
         _patrolling.Enable();
         _animator.Walk();
