@@ -7,6 +7,7 @@ public class PlayerSeeker : MonoBehaviour
     [SerializeField, Min(1f)] private float _visionAngle = 30f;
     [SerializeField, Min(0f)] private float _visionDistance = 3f;
     [SerializeField] private LayerMask _wallMask;
+    [SerializeField] private VisibilityRange _visibilityRange;
 
     private NavMeshAgent _agent;
     
@@ -32,6 +33,8 @@ public class PlayerSeeker : MonoBehaviour
     private void Update()
     {
         bool isPlayerVisible = IsPlayerVisible();
+        
+        _visibilityRange.SetDirection(Forward);
 
         if (isPlayerVisible == _isPlayerVisible)
             return;
@@ -49,6 +52,8 @@ public class PlayerSeeker : MonoBehaviour
         _isPlayerVisible = false;
         _player = player;
         _agent = agent;
+        
+        _visibilityRange.Initialize(_visionDistance, _visionAngle, Forward);
     }
 
     private bool IsPlayerVisible()

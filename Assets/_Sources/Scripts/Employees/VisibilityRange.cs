@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,25 +10,18 @@ public class VisibilityRange : MonoBehaviour
     private Vector2 _direction = Vector2.up;
     private bool _isInitialized = false;
 
-    public void SetDirection(Vector2 newDirection)
-    {
-        if (newDirection.magnitude > 0)
-        {
-            _direction = newDirection;
-        }
-        UpdateState();
-    }
-
     public void Initialize(float maxDistance, float viewAngle, Vector2 initialDirection)
     {
         if (maxDistance > 0)
         {
             _maxDistance = maxDistance;
         }
+        
         if (viewAngle > 0)
         {
             _viewAngle = viewAngle;
         }
+        
         if (initialDirection.magnitude > 0)
         {
             _direction = initialDirection;
@@ -39,30 +29,26 @@ public class VisibilityRange : MonoBehaviour
 
         _circleImage.fillAmount = _viewAngle / 360;
 
-        var canvasRectTransform = gameObject.GetComponent<RectTransform>();
-        canvasRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, _maxDistance);
-        canvasRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _maxDistance);
+        RectTransform canvasRectTransform = gameObject.GetComponent<RectTransform>();
+        canvasRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, _maxDistance * 2f);
+        canvasRectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _maxDistance * 2f);
 
         _isInitialized = true;
         UpdateState();
     }
 
-    private void Start()
+    public void SetDirection(Vector2 newDirection)
     {
-        Initialize(_maxDistance, _viewAngle, _direction);
+        if (newDirection.magnitude > 0)
+        {
+            _direction = newDirection;
+        }
+        
+        UpdateState();
     }
 
     private void UpdateState()
     {
-        if (_circleImage != null && _isInitialized)
-        {
-            float rotationAngle = Quaternion.FromToRotation(Vector3.up, _direction).eulerAngles.y - _viewAngle / 2;
-            _circleImage.transform.rotation = Quaternion.FromToRotation(Vector3.up, _direction) * Quaternion.AngleAxis(-_viewAngle / 2, Vector3.back);
-        }
-    }
-
-    private void Update()
-    {
-        //UpdateState();
+        _circleImage.transform.rotation = Quaternion.FromToRotation(Vector3.up, _direction) * Quaternion.AngleAxis(-_viewAngle / 2, Vector3.back);
     }
 }
