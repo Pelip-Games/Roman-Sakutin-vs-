@@ -471,6 +471,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1194281107 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8817833649031434483, guid: 8141a8cca9a5ba240b33d45c166e4508,
+    type: 3}
+  m_PrefabInstance: {fileID: 3165259062037071667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1770527696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -655,6 +661,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2864822138548181021, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3165259061566800932, guid: 8141a8cca9a5ba240b33d45c166e4508,
         type: 3}
       propertyPath: _weapon
@@ -720,11 +731,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sakutin
       objectReference: {fileID: 0}
+    - target: {fileID: 3165259062309982988, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.218
+      objectReference: {fileID: 0}
+    - target: {fileID: 3165259062309983090, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: _weaponSprite
+      value: 
+      objectReference: {fileID: 1194281107}
     - target: {fileID: 3165259062309983091, guid: 8141a8cca9a5ba240b33d45c166e4508,
         type: 3}
       propertyPath: _aim
       value: 
       objectReference: {fileID: 174691130}
+    - target: {fileID: 5089265237714913807, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570279104708360995, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817833649031434483, guid: 8141a8cca9a5ba240b33d45c166e4508,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8141a8cca9a5ba240b33d45c166e4508, type: 3}
 --- !u!1 &3165259062037071668 stripped
