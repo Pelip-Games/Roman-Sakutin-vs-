@@ -41,7 +41,10 @@ public class Phrases : MonoBehaviour
     {
         "Так, какой сегодня день?",
         "Блин! Сегодня же день зарплаты!",
-        "Нельзя чтобы они меня поймали! Иначе они отберут у меня ВСЁ!"
+        "Где мой деньгомёт???",
+        "...",
+        "Нельзя чтобы они меня поймали!",
+        "Иначе они отберут у меня ВСЁ!"
     };
 
     [SerializeField] private Bubble _bubblePrefab;
@@ -81,7 +84,7 @@ public class Phrases : MonoBehaviour
         foreach (var phrase in _startPhrases)
         {
             SayPhrase(phrase);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(3);
         }
     }
 
