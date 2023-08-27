@@ -18,6 +18,12 @@ public class PlayerSeeker : MonoBehaviour
     private Transform _player;
     private Vector3 Forward => _agent.velocity.normalized;
 
+    private void OnValidate()
+    {
+        _visibilityRange.Initialize(_visionDistance, _visionAngle, Vector2.up);
+        _visibilityRange.SetDirection(Vector2.up);
+    }
+
     private void OnDrawGizmos()
     {
         if (_agent == null)
