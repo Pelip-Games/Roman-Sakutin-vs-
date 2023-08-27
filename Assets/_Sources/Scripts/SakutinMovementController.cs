@@ -9,6 +9,7 @@ public class SakutinMovementController : MonoBehaviour
     [SerializeField] private SakutinAnimatorController _animator;
     [SerializeField] private Weapon _weapon;
     [SerializeField] private Phrases _phrases;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private bool _isStunned;
     private Vector2 _direction;
@@ -67,6 +68,16 @@ public class SakutinMovementController : MonoBehaviour
         else
         {
             _animator.SetRunning();
+        }
+
+        if (horizontalInput > 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+
+        if (horizontalInput < 0)
+        {
+            _spriteRenderer.flipX = false;
         }
 
         _direction.x = horizontalInput * _speed;

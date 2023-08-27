@@ -188,6 +188,7 @@ MonoBehaviour:
   _animator: {fileID: 3165259062037071669}
   _weapon: {fileID: 3165259062309983090}
   _phrases: {fileID: 335196625}
+  _spriteRenderer: {fileID: 8570279104708360995}
 --- !u!114 &3165259062037071669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +517,12 @@ Animator:
 --- !u!4 &8570279104708360994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2172795652540153090, guid: 6902aad196794a14aa36a6c43a8e7fd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7550545713628907040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &8570279104708360995 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2172795652540153091, guid: 6902aad196794a14aa36a6c43a8e7fd3,
     type: 3}
   m_PrefabInstance: {fileID: 7550545713628907040}
   m_PrefabAsset: {fileID: 0}
