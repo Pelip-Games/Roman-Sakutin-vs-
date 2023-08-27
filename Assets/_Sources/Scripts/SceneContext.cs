@@ -9,6 +9,8 @@ public class SceneContext : MonoBehaviour
 
     private void OnEnable()
     {
+        _gameMenu.UpdateBalance(_wallet.Balance);
+
         _wallet.BalanceChanged += UpdateUIBalance;
         _wallet.WalletIsEmpty += DisableWeapon;
 
